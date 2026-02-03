@@ -22,8 +22,8 @@ spec:
           ports:
             - containerPort: 80
           env:
-            - name: REACT_APP_API_URL
-              value: "http://your-spotify.your-spotify.svc.cluster.local"
+            - name: API_ENDPOINT
+              value: "https://spotify.leibold.tech"
           resources:
             requests:
               cpu: "100m"

@@ -26,13 +26,19 @@ spec:
             - name: MONGODB_URI
               value: "mongodb://mongodb.mongodb.svc.cluster.local:27017/your_spotify"
 
-            - name: SPOTIFY_CLIENT_ID
+            - name: API_ENDPOINT
+              value: "https://spotify.leibold.tech"
+
+            - name: CLIENT_ENDPOINT
+              value: "http://your-spotify-client.your-spotify.svc.cluster.local"
+
+            - name: SPOTIFY_PUBLIC
               valueFrom:
                 secretKeyRef:
                   name: your-spotify-secrets
                   key: SPOTIFY_CLIENT_ID
 
-            - name: SPOTIFY_CLIENT_SECRET
+            - name: SPOTIFY_SECRET
               valueFrom:
                 secretKeyRef:
                   name: your-spotify-secrets
